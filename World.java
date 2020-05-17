@@ -8,8 +8,6 @@ public class World {
 
     public void setupNodes(int n){
 
-        // TODO: test if length of nodes is n.
-
         nodes.clear();
 
         for(int i = 0; i < n; i++){
@@ -17,19 +15,16 @@ public class World {
         }
     }
 
-    public void clearNodes(){
+    public int getNodeAmount(){
+        return nodes.size();
+    }
 
-        // TODO: test if length of nodes is 0.
+    public void clearNodes(){
 
         nodes.clear();
     }
 
     public void setupSixSidedDice() throws Exception{
-
-        // TODO: test if nodes[3] has a connection to nodes[1].
-        // TODO: test if nodes[10] is an endnode.
-        // TODO: test exception if nodes is empty.
-        // TODO: test exception if nodes length is not big enough.
 
         if(!nodes.isEmpty()){
             if(nodes.size() > 12){
@@ -69,11 +64,6 @@ public class World {
     }
 
     public void setupEigthSidedDice() throws Exception{
-
-        // TODO: test if nodes[6] has a connection to nodes[14].
-        // TODO: test if nodes[14] is an endnode.
-        // TODO: test exception if nodes is empty.
-        // TODO: test exception if nodes length is not big enough.
 
         if(!nodes.isEmpty()){
             if(nodes.size() > 14){
@@ -118,11 +108,7 @@ public class World {
     }
 
     public void setupNetwork() throws Exception{
-
-        // TODO: test if nodes[2] has a connection to nodes[3].
-        // TODO: test exception if nodes is empty.
-        // TODO: test exception if nodes length is not big enough.
-
+    
         if(!nodes.isEmpty()){
             if(nodes.size() > 3){
                 nodes.get(0).addNode(nodes.get(2));
@@ -144,9 +130,6 @@ public class World {
     }
 
     public void travelDice(int startPoint) throws Exception{
-        
-        // TODO: test exception if nodes is empty.
-        // TODO: test exception if startpoint doesn't exists.
 
         if(!nodes.isEmpty()){
             if(nodes.size() > startPoint){
@@ -172,10 +155,6 @@ public class World {
     }
 
     public int[] travelString(int startPoint, String[] path) throws Exception{
-
-        // TODO: test exception if nodes is empty.
-        // TODO: test path with a known correct path.
-        // TODO: test exception if startpoint doesn't exists.
 
         if(!nodes.isEmpty()){
             if (nodes.size() > startPoint){

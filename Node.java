@@ -53,7 +53,7 @@ public class Node {
     
     public Node travelNodeWithString(String s){
 		
-		if(this.nodes.size() > 2){
+		if(this.nodes.size() > 1){
 			if (s == "A"){
 				if (this.nodes.get(0) != null){
 					return this.nodes.get(0);
